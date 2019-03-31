@@ -27,7 +27,7 @@ function searchFiles(res, params, callback) {
         for (let i=0, imax=data.length; i<imax; i++) {
             let item = data[i];
             let ext = getExtension(item);
-            if (ext == 'js' || ext == 'axp' || ext == 'axs') {  // TODO : drop the test "js"
+            if (ext == 'axp' || ext == 'axs') {  
                 let content = getFileContents(item);
                 if (checkStringOccurs(content, searchdata)) {
                     files.push(item);
